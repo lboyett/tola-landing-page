@@ -1,0 +1,10 @@
+.test-class {
+  color: blue;
+  font-size: 5rem;
+}
+
+@media (min-width: 600px) {
+  .test-class {
+    color: red;
+  }
+}

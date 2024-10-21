@@ -1,0 +1,287 @@
+body {
+  min-height: 100vh;
+  background-color: black;
+  padding: 2px;
+  font-family: 'Roboto';
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 76vh;
+  gap: 2px;
+  width: 100%;
+}
+
+.hero-left,
+.hero-right,
+.hero-left img {
+  border-radius: 12px;
+}
+
+.hero .logo {
+  width: 9rem;
+  margin: 36px;
+  position: absolute;
+  fill: white;
+}
+
+.hero .logo:hover {
+  cursor: pointer;
+  fill: rgb(224, 224, 224);
+}
+
+.hero-left {
+  width: 100%;
+  height: 50%;
+}
+
+.hero-left .invoice {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-right {
+  flex-grow: 1;
+  flex-basis: 0;
+  background: rgb(194, 236, 177);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-right h1 {
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -3px;
+}
+
+.hero-right div {
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+.select-template {
+  width: 100%;
+  background-color: white;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 2px;
+}
+
+.select-template button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-template:hover {
+  cursor: pointer;
+}
+
+.select-template svg {
+  width: 1.5rem;
+  margin-left: 2rem;
+}
+
+.templates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  margin-top: 2px;
+  gap: 2px;
+  /* border: 1px solid red; */
+}
+
+.template {
+  width: 100%;
+  height: 60vw;
+  background: white;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.template:hover {
+  cursor: pointer;
+}
+
+.template-label {
+  font-size: 26px;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.template:hover .template-label {
+  transform: translate(-50%, -84px);
+  transition: all 0.3s;
+}
+
+.template:hover {
+  transition: all 0.3s;
+}
+
+.template:first-child:hover {
+  background: rgb(255, 234, 199);
+}
+
+.template:nth-child(2):hover {
+  background: rgb(223, 217, 255);
+}
+
+.template:nth-child(3):hover {
+  background: rgb(255, 229, 251);
+}
+
+.template:nth-child(4):hover {
+  background: rgb(220, 245, 239);
+}
+
+.template:nth-child(5):hover {
+  background: rgb(255, 221, 216);
+}
+.template:nth-child(6):hover {
+  background: rgb(213, 227, 250);
+}
+
+.template-page {
+  background: rgb(229, 229, 229);
+  transition: all 0.3s ease;
+}
+
+.template:hover .template-page {
+  transform: translateY(-32px);
+  transition: all 0.3s ease;
+  background: #dadada58;
+}
+
+.pay-section {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pay-section .right,
+.pay-section .left {
+  background: rgb(182, 205, 229);
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+}
+
+.pay-section .left {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pay-section .left h2 {
+  font-size: 32px;
+  letter-spacing: -2px;
+  line-height: 32px;
+}
+
+.pay-section .left ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.pay-section .left li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pay-section .left li span {
+  width: 1rem;
+}
+
+.pay-section .left button {
+  font-size: 12px;
+  padding: 6px 10px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: max-content;
+}
+
+@media (min-width: 665px) {
+  .hero {
+    flex-direction: row;
+  }
+
+  .hero-left {
+    width: 50%;
+    height: 100%;
+  }
+
+  .hero-right {
+    padding: 36px;
+  }
+
+  .hero-left,
+  .hero-right,
+  .hero-left img,
+  .select-template,
+  .template {
+    border-radius: 36px;
+  }
+
+  .hero-right h1 {
+    font-size: 5vw;
+    line-height: 5vw;
+  }
+
+  .hero-right div {
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+
+  .select-template button {
+    font-size: 24px;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  .templates {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .template {
+    height: 40vw;
+  }
+
+  .template-page {
+    width: 50%;
+    height: 64%;
+  }
+
+  .pay-section {
+    flex-direction: row;
+    height: 40vw;
+  }
+  .pay-section .left,
+  .pay-section .right {
+    height: 100%;
+  }
+}
